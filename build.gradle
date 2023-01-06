@@ -1,0 +1,25 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+}
+
+repositories {
+    // Use JCenter for resolving dependencies.
+    jcenter()
+}
+
+dependencies {
+    // Use JUnit test framework.
+    testImplementation 'junit:junit:4.13'
+
+    // This dependency is used by the application.
+    implementation 'com.google.guava:guava:29.0-jre'
+    implementation group: 'org.springframework', name: 'spring-context', version: '6.0.3'
+}
+
+application {
+//    sourceCompatibility = 17
+//    targetCompatibility = 17
+    // Define the main class for the application.
+    mainClass = 'org.houston.App'
+}
